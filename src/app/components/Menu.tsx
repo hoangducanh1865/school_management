@@ -118,9 +118,9 @@ const menuItems = [
 
 const Menu = () => {
   return (
-    <div className="mt-4 text-sm">
+    <div className="mt-4 text-sm pl-2 lg:pl-4">
         {menuItems.map((item) => (
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2" key={item.title}>
                 <span className="hidden lg:block text-gray-400 font-light my-4">{item.title}</span>
                 {item.items.map((sub_item) => (
                     <Link href={sub_item.href} key={sub_item.label} className="flex items-center justify-center lg:justify-start gap-4 text-gray-500 py-2">
