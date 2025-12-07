@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import TeacherForm from "./forms/TeacherForm";
 
 const FormModel = ({ table, type, data, id }: {
   table: "teacher" | "student" | "parent" | "subject" | "class" | "lesson" | "exam" | "assignment" | "result" | "attendance" | "event" | "announcement";
@@ -21,7 +22,7 @@ const FormModel = ({ table, type, data, id }: {
         <button className="bg-red-700 text-white px-4 py-2 rounded-md border-none w-max self-center">Delete</button>
       </form>
     ) : (
-      "create or update form"
+      <TeacherForm type="create" />
     )
   }
 
